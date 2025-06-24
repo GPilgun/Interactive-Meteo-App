@@ -58,9 +58,10 @@ async function chargerConfiguration() {
   return response.json();
 }
 
-// 2. Get weather data from wttr.in
-async function obtenirMeteo(city) {
-  const url = `https://wttr.in/${encodeURIComponent(city)}?format=j1`;
+// 2. Get weather data from api.open-meteo.com
+
+ async function obtenirMeteo(city) {
+  const url = `https://api.open-meteo.com/${encodeURIComponent(city)}?format=j1`;
   const response = await fetch(url);
   if (!response.ok) throw new Error("Erreur de récupération des données météo.");
   const data = await response.json();
