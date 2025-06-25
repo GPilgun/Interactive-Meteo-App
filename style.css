@@ -86,30 +86,34 @@ hr::after {
 
 .input-zone{
  display:flex;
-  gap: 10px;
+  gap: 0.5rem;
   flex-shrink: 0;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
  }
 
 .input-zone input {
   flex: 1;
-  padding: 10px;
-  width: 200px;
-  margin-right: 10px;
+  min-width:0;
+  padding: 0.5rem;
+ /* margin-right: 10px;*/
   border-radius: 10px;
   background-color: azure;
   border-color: azure;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 .input-zone button {
-  padding: 10px 15px;
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color:#b0c1e9 ;
   border: none;
   border-color: #b0c1e9;
+  font-size: 1rem;
 }
 
 .input-zone button:hover {
@@ -172,6 +176,7 @@ hr::after {
 
   .input-zone {
     align-items: stretch;
+    flex-direction: row;
   }
 
   .input-zone input,
